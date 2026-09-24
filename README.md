@@ -44,7 +44,7 @@ Priority Score = (Vehicles x 2) + (Wait Time x 0.5) + Emergency Bonus
 * **Remaining Dynamic Pool:** 120 - 40 = 80
 
 ```math
-\text{Green Time} = 10 + \left( \frac{\text{Direction Priority}}{\text{Total Intersection Priority}} \times 80 \right)
+**Green Time** = 10s + [ (Direction Priority / Total Priority) × 80s ]
 ```
 
 ### 3. Congestion Thresholds
