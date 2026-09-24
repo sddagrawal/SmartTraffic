@@ -29,26 +29,29 @@ This project is built using core Python without external libraries:
 
 ---
 
-## How the Algorithm Works
+## Algorithm Working
 
 ### 1. Priority Score Formula
-$$\text{Priority Score} = (\text{Vehicles} \times 2) + (\text{Wait Time} \times 0.5) + \text{Emergency Bonus}$$
+Priority Score = (Vehicles x 2) + (Wait Time x 0.5) + Emergency Bonus
 
-* **Vehicles ($\times 2$):** Heavily weights traffic volume to clear dense lanes.
-* **Wait Time ($\times 0.5$):** Prevents starvation by gradually increasing score as vehicles wait longer.
-* **Emergency Bonus ($+100$):** Grants immediate top-priority status to emergency vehicles.
+* **Vehicles (x2):** Heavily weights traffic volume to clear dense lanes.
+* **Wait Time (x0.5):** Prevents starvation by gradually increasing score as vehicles wait longer.
+* **Emergency Bonus (+100):** Grants immediate top-priority status to emergency vehicles.
 
 ### 2. Dynamic Time Allocation
 * **Total Cycle Pool:** 120 seconds
-* **Minimum Guaranteed Time:** 10 seconds per direction ($4 \times 10 = 40\text{s}$)
-* **Remaining Dynamic Pool:** $120 - 40 = 80\text{ seconds}$
+* **Minimum Guaranteed Time:** 10 seconds per direction 
+* **Remaining Dynamic Pool:** 120 - 40 = 80
 
-$$\text{Green Time} = 10 + \left( \frac{\text{Direction Priority}}{\text{Total Intersection Priority}} \times 80 \right)$$
+```math
+\text{Green Time} = 10 + \left( \frac{\text{Direction Priority}}{\text{Total Intersection Priority}} \times 80 \right)
+```
 
 ### 3. Congestion Thresholds
 A road is flagged as **`congested`** if:
-* $\text{Vehicles} > 20$, OR
-* $\text{Wait Time} > 60\text{ seconds}$
+* Vehicles > 20
+ OR
+* text > 60 sec
 
 Otherwise, status is marked **`normal`**.
 
