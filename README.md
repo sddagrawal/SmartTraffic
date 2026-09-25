@@ -1,16 +1,16 @@
 # Smart Traffic Signal Optimization System
 
-A Python-based simulation designed to dynamically allocate traffic signal timings and determine signal order at a four-way intersection (North, South, East, West). 
+A Python-based simulation designed to dynamically allocate traffic signal timings and determine signal order at a four-way intersection i.e. North, South, East and West. 
 
-Unlike traditional fixed-timer traffic lights, this system calculates real-time priority scores based on vehicle density, waiting time, and emergency vehicle presence to reduce overall traffic delay and gridlock.
+Unlike usual fixed-timer traffic lights, this system calculates real-time priority scores based on vehicle density, waiting time, and emergency vehicle presence to reduce overall traffic delay and gridlock.
 
 ---
 
 ## Features
 
-* **Dynamic Green-Light Allocation:** Allocates signal duration dynamically from a total cycle pool (120s) based on real-time traffic demand.
+* **Dynamic Green-Light Allocation:** Allocates signal duration dynamically from a total cycle pool for 120s based on real-time traffic demand.
 * **Emergency Vehicle Override:** Automatically boosts the priority score of any direction with an active emergency vehicle, prioritizing it to receive a green light first.
-* **Fairness Base Guarantee:** Reserves a minimum green-light time (10 seconds) for all directions so low-traffic roads are never neglected.
+* **Fairness Base Guarantee:** Reserves a minimum green-light time for 10 seconds for all directions so low-traffic roads are never neglected.
 * **Congestion Detection:** Identifies bottleneck roads based on vehicle count or wait time thresholds and displays a `congested` alert.
 * **Performance Comparison:** Computes and compares total wait delays between a traditional fixed-timer system (30s per lane) and the optimized dynamic system.
 * **Robust Input Validation:** Prevents crashes by validating numerical ranges and handling invalid string inputs safely.
@@ -44,7 +44,7 @@ Priority Score = (Vehicles x 2) + (Wait Time x 0.5) + Emergency Bonus
 * **Remaining Dynamic Pool:** 120 - 40 = 80
 
 ```math
-**Green Time** = 10s + [ (Direction Priority / Total Priority) × 80s ]
+Green Time = 10s + [ (Direction Priority / Total Priority) × 80s ]
 ```
 
 ### 3. Congestion Thresholds
