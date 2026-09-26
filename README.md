@@ -12,7 +12,7 @@ cycle pool of 120 sec based on real-time traffic demand.
 * **Emergency Vehicle Override:** Automatically boosts the priority score of any direction with an active emergency vehicle, prioritizing it to receive a green light first.
 * **Fairness Base Guarantee:** Reserves a minimum green-light time for 10 seconds for all directions so low-traffic roads are never neglected.
 * **Congestion Detection:** Identifies bottleneck roads based on vehicle count or wait time thresholds and displays a `congested` alert.
-* **Performance Comparison:** Computes and compares total wait delays between a old fixed-timer system that is uaually 30s per lane and the optimized dynamic system.
+* **Performance Comparison:** Computes and compares total wait delays between a old fixed-timer system that is usually 30s per lane and the optimized dynamic system.
 * **Robust Input Validation:** Prevents crashes by validating numerical ranges and handling invalid string inputs safely.
 * **Simulation Loop:** Allows users to run multiple traffic scenarios sequentially without re-executing the script again and again.
 
@@ -88,8 +88,7 @@ before running this project, following must be installed:
 ### 1. Clone the Repository
 open terminal and run:
 ```bash
-git clone
-https://github.com/sddagrawal/SmartTraffic
+git clone https://github.com/sddagrawal/SmartTraffic
 ```
 after cloning, into project folder:
 ```bash
@@ -109,7 +108,7 @@ All functionality is impemented using inbuilt python function
 No additional configuration or API keys, Database, or external services required.
 
 ### 5.Run the Program
-In VS Code terminal inproject folder, run:
+In VS Code terminal in project folder, run:
 ```bash
 py main.py
 ```
