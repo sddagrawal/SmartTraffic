@@ -114,3 +114,10 @@ py main.py
 ```
 The program will ask user to enter traffic information for four directions
 
+---
+
+## Testing
+all test cases are compiled in a seperate testing filt
+TESTING.md
+
+
